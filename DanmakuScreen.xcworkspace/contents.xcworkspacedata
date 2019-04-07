@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Starscream/Starscream.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:DanmakuScreen/DanmakuScreen.xcodeproj">
    </FileRef>
 </Workspace>

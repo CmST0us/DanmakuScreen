@@ -11,7 +11,49 @@
 		4FB0E50A225A5D4400EFACB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E509225A5D4400EFACB0 /* ViewController.swift */; };
 		4FB0E50C225A5D4600EFACB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FB0E50B225A5D4600EFACB0 /* Assets.xcassets */; };
 		4FB0E50F225A5D4600EFACB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FB0E50D225A5D4600EFACB0 /* Main.storyboard */; };
+		4FB0E51A225A634C00EFACB0 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB0E519225A634C00EFACB0 /* Starscream.framework */; };
+		4FB0E51B225A634C00EFACB0 /* Starscream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB0E519225A634C00EFACB0 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4FB0E51E225A63BE00EFACB0 /* BiliBiliHaishinRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E51D225A63BE00EFACB0 /* BiliBiliHaishinRoom.swift */; };
+		4FB0E521225A64E800EFACB0 /* URLSessionSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E520225A64E800EFACB0 /* URLSessionSync.swift */; };
+		4FB0E524225A660400EFACB0 /* BiliBiliHaishinRoomJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E523225A660400EFACB0 /* BiliBiliHaishinRoomJSON.swift */; };
+		4FB0E52C225A676F00EFACB0 /* DanmakuScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E52B225A676F00EFACB0 /* DanmakuScreenTests.swift */; };
+		4FB0E533225A67F300EFACB0 /* BiliBiliHaishinRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E51D225A63BE00EFACB0 /* BiliBiliHaishinRoom.swift */; };
+		4FB0E534225A67F600EFACB0 /* BiliBiliHaishinRoomJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E523225A660400EFACB0 /* BiliBiliHaishinRoomJSON.swift */; };
+		4FB0E535225A67FB00EFACB0 /* URLSessionSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E520225A64E800EFACB0 /* URLSessionSync.swift */; };
+		4FB0E537225A6B2D00EFACB0 /* BiliBiliHaishinPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E536225A6B2D00EFACB0 /* BiliBiliHaishinPacket.swift */; };
+		4FB0E539225A6B6C00EFACB0 /* ByteArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E538225A6B6C00EFACB0 /* ByteArray.swift */; };
+		4FB0E53A225A6B6F00EFACB0 /* ByteArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E538225A6B6C00EFACB0 /* ByteArray.swift */; };
+		4FB0E53C225A6BAA00EFACB0 /* ExpressibleByIntegerLiteral+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E53B225A6BAA00EFACB0 /* ExpressibleByIntegerLiteral+Extension.swift */; };
+		4FB0E53D225A717600EFACB0 /* BiliBiliHaishinPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E536225A6B2D00EFACB0 /* BiliBiliHaishinPacket.swift */; };
+		4FB0E53E225A717E00EFACB0 /* ExpressibleByIntegerLiteral+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E53B225A6BAA00EFACB0 /* ExpressibleByIntegerLiteral+Extension.swift */; };
+		4FB0E540225A75F100EFACB0 /* BiliBiliHaishinRoomDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E53F225A75F100EFACB0 /* BiliBiliHaishinRoomDelegate.swift */; };
+		4FB0E541225A769B00EFACB0 /* BiliBiliHaishinRoomDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E53F225A75F100EFACB0 /* BiliBiliHaishinRoomDelegate.swift */; };
+		4FB0E543225A7B7F00EFACB0 /* BiliBiliHaishinPacketDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E542225A7B7F00EFACB0 /* BiliBiliHaishinPacketDecoder.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4FB0E52E225A676F00EFACB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FB0E4FC225A5D4400EFACB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FB0E503225A5D4400EFACB0;
+			remoteInfo = DanmakuScreen;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4FB0E51C225A634C00EFACB0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4FB0E51B225A634C00EFACB0 /* Starscream.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4FB0E504225A5D4400EFACB0 /* DanmakuScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DanmakuScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -21,10 +63,30 @@
 		4FB0E50E225A5D4600EFACB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4FB0E510225A5D4600EFACB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FB0E511225A5D4600EFACB0 /* DanmakuScreen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DanmakuScreen.entitlements; sourceTree = "<group>"; };
+		4FB0E519225A634C00EFACB0 /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FB0E51D225A63BE00EFACB0 /* BiliBiliHaishinRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiliBiliHaishinRoom.swift; sourceTree = "<group>"; };
+		4FB0E520225A64E800EFACB0 /* URLSessionSync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionSync.swift; sourceTree = "<group>"; };
+		4FB0E523225A660400EFACB0 /* BiliBiliHaishinRoomJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiliBiliHaishinRoomJSON.swift; sourceTree = "<group>"; };
+		4FB0E529225A676F00EFACB0 /* DanmakuScreenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DanmakuScreenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FB0E52B225A676F00EFACB0 /* DanmakuScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanmakuScreenTests.swift; sourceTree = "<group>"; };
+		4FB0E52D225A676F00EFACB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FB0E536225A6B2D00EFACB0 /* BiliBiliHaishinPacket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiliBiliHaishinPacket.swift; sourceTree = "<group>"; };
+		4FB0E538225A6B6C00EFACB0 /* ByteArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ByteArray.swift; sourceTree = "<group>"; };
+		4FB0E53B225A6BAA00EFACB0 /* ExpressibleByIntegerLiteral+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExpressibleByIntegerLiteral+Extension.swift"; sourceTree = "<group>"; };
+		4FB0E53F225A75F100EFACB0 /* BiliBiliHaishinRoomDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiliBiliHaishinRoomDelegate.swift; sourceTree = "<group>"; };
+		4FB0E542225A7B7F00EFACB0 /* BiliBiliHaishinPacketDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiliBiliHaishinPacketDecoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4FB0E501225A5D4400EFACB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FB0E51A225A634C00EFACB0 /* Starscream.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FB0E526225A676F00EFACB0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,7 +99,9 @@
 		4FB0E4FB225A5D4400EFACB0 = {
 			isa = PBXGroup;
 			children = (
+				4FB0E519225A634C00EFACB0 /* Starscream.framework */,
 				4FB0E506225A5D4400EFACB0 /* DanmakuScreen */,
+				4FB0E52A225A676F00EFACB0 /* DanmakuScreenTests */,
 				4FB0E505225A5D4400EFACB0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				4FB0E504225A5D4400EFACB0 /* DanmakuScreen.app */,
+				4FB0E529225A676F00EFACB0 /* DanmakuScreenTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -53,8 +118,9 @@
 		4FB0E506225A5D4400EFACB0 /* DanmakuScreen */ = {
 			isa = PBXGroup;
 			children = (
+				4FB0E51F225A64DD00EFACB0 /* Utils */,
 				4FB0E518225A5DAA00EFACB0 /* BiliBiliHaishinRoom */,
-				4FB0E517225A5D9A00EFACB0 /* Danmaku */,
+				4FB0E517225A5D9A00EFACB0 /* BiliBiliHaishin */,
 				4FB0E507225A5D4400EFACB0 /* AppDelegate.swift */,
 				4FB0E509225A5D4400EFACB0 /* ViewController.swift */,
 				4FB0E50B225A5D4600EFACB0 /* Assets.xcassets */,
@@ -65,18 +131,50 @@
 			path = DanmakuScreen;
 			sourceTree = "<group>";
 		};
-		4FB0E517225A5D9A00EFACB0 /* Danmaku */ = {
+		4FB0E517225A5D9A00EFACB0 /* BiliBiliHaishin */ = {
 			isa = PBXGroup;
 			children = (
+				4FB0E536225A6B2D00EFACB0 /* BiliBiliHaishinPacket.swift */,
+				4FB0E542225A7B7F00EFACB0 /* BiliBiliHaishinPacketDecoder.swift */,
 			);
-			path = Danmaku;
+			path = BiliBiliHaishin;
 			sourceTree = "<group>";
 		};
 		4FB0E518225A5DAA00EFACB0 /* BiliBiliHaishinRoom */ = {
 			isa = PBXGroup;
 			children = (
+				4FB0E522225A65E900EFACB0 /* Model */,
+				4FB0E51D225A63BE00EFACB0 /* BiliBiliHaishinRoom.swift */,
+				4FB0E53F225A75F100EFACB0 /* BiliBiliHaishinRoomDelegate.swift */,
 			);
 			path = BiliBiliHaishinRoom;
+			sourceTree = "<group>";
+		};
+		4FB0E51F225A64DD00EFACB0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4FB0E53B225A6BAA00EFACB0 /* ExpressibleByIntegerLiteral+Extension.swift */,
+				4FB0E538225A6B6C00EFACB0 /* ByteArray.swift */,
+				4FB0E520225A64E800EFACB0 /* URLSessionSync.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4FB0E522225A65E900EFACB0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4FB0E523225A660400EFACB0 /* BiliBiliHaishinRoomJSON.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4FB0E52A225A676F00EFACB0 /* DanmakuScreenTests */ = {
+			isa = PBXGroup;
+			children = (
+				4FB0E52B225A676F00EFACB0 /* DanmakuScreenTests.swift */,
+				4FB0E52D225A676F00EFACB0 /* Info.plist */,
+			);
+			path = DanmakuScreenTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +187,7 @@
 				4FB0E500225A5D4400EFACB0 /* Sources */,
 				4FB0E501225A5D4400EFACB0 /* Frameworks */,
 				4FB0E502225A5D4400EFACB0 /* Resources */,
+				4FB0E51C225A634C00EFACB0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -98,6 +197,24 @@
 			productName = DanmakuScreen;
 			productReference = 4FB0E504225A5D4400EFACB0 /* DanmakuScreen.app */;
 			productType = "com.apple.product-type.application";
+		};
+		4FB0E528225A676F00EFACB0 /* DanmakuScreenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FB0E530225A676F00EFACB0 /* Build configuration list for PBXNativeTarget "DanmakuScreenTests" */;
+			buildPhases = (
+				4FB0E525225A676F00EFACB0 /* Sources */,
+				4FB0E526225A676F00EFACB0 /* Frameworks */,
+				4FB0E527225A676F00EFACB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4FB0E52F225A676F00EFACB0 /* PBXTargetDependency */,
+			);
+			name = DanmakuScreenTests;
+			productName = DanmakuScreenTests;
+			productReference = 4FB0E529225A676F00EFACB0 /* DanmakuScreenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -111,6 +228,15 @@
 				TargetAttributes = {
 					4FB0E503225A5D4400EFACB0 = {
 						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					4FB0E528225A676F00EFACB0 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 4FB0E503225A5D4400EFACB0;
 					};
 				};
 			};
@@ -128,6 +254,7 @@
 			projectRoot = "";
 			targets = (
 				4FB0E503225A5D4400EFACB0 /* DanmakuScreen */,
+				4FB0E528225A676F00EFACB0 /* DanmakuScreenTests */,
 			);
 		};
 /* End PBXProject section */
@@ -142,6 +269,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4FB0E527225A676F00EFACB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -149,12 +283,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FB0E537225A6B2D00EFACB0 /* BiliBiliHaishinPacket.swift in Sources */,
+				4FB0E539225A6B6C00EFACB0 /* ByteArray.swift in Sources */,
+				4FB0E53C225A6BAA00EFACB0 /* ExpressibleByIntegerLiteral+Extension.swift in Sources */,
 				4FB0E50A225A5D4400EFACB0 /* ViewController.swift in Sources */,
+				4FB0E524225A660400EFACB0 /* BiliBiliHaishinRoomJSON.swift in Sources */,
 				4FB0E508225A5D4400EFACB0 /* AppDelegate.swift in Sources */,
+				4FB0E51E225A63BE00EFACB0 /* BiliBiliHaishinRoom.swift in Sources */,
+				4FB0E543225A7B7F00EFACB0 /* BiliBiliHaishinPacketDecoder.swift in Sources */,
+				4FB0E521225A64E800EFACB0 /* URLSessionSync.swift in Sources */,
+				4FB0E540225A75F100EFACB0 /* BiliBiliHaishinRoomDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FB0E525225A676F00EFACB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FB0E541225A769B00EFACB0 /* BiliBiliHaishinRoomDelegate.swift in Sources */,
+				4FB0E53E225A717E00EFACB0 /* ExpressibleByIntegerLiteral+Extension.swift in Sources */,
+				4FB0E52C225A676F00EFACB0 /* DanmakuScreenTests.swift in Sources */,
+				4FB0E534225A67F600EFACB0 /* BiliBiliHaishinRoomJSON.swift in Sources */,
+				4FB0E53A225A6B6F00EFACB0 /* ByteArray.swift in Sources */,
+				4FB0E533225A67F300EFACB0 /* BiliBiliHaishinRoom.swift in Sources */,
+				4FB0E53D225A717600EFACB0 /* BiliBiliHaishinPacket.swift in Sources */,
+				4FB0E535225A67FB00EFACB0 /* URLSessionSync.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4FB0E52F225A676F00EFACB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FB0E503225A5D4400EFACB0 /* DanmakuScreen */;
+			targetProxy = 4FB0E52E225A676F00EFACB0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4FB0E50D225A5D4600EFACB0 /* Main.storyboard */ = {
@@ -296,7 +461,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.eric3u.DanmakuScreen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -316,10 +481,50 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.eric3u.DanmakuScreen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		4FB0E531225A676F00EFACB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2VQ94C2355;
+				INFOPLIST_FILE = DanmakuScreenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eric3u.DanmakuScreenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DanmakuScreen.app/Contents/MacOS/DanmakuScreen";
+			};
+			name = Debug;
+		};
+		4FB0E532225A676F00EFACB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2VQ94C2355;
+				INFOPLIST_FILE = DanmakuScreenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eric3u.DanmakuScreenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DanmakuScreen.app/Contents/MacOS/DanmakuScreen";
 			};
 			name = Release;
 		};
@@ -340,6 +545,15 @@
 			buildConfigurations = (
 				4FB0E515225A5D4600EFACB0 /* Debug */,
 				4FB0E516225A5D4600EFACB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FB0E530225A676F00EFACB0 /* Build configuration list for PBXNativeTarget "DanmakuScreenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FB0E531225A676F00EFACB0 /* Debug */,
+				4FB0E532225A676F00EFACB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
