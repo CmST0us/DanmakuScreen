@@ -10,11 +10,10 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        NSApplication.shared.windows[0].isOpaque = false
+        NSApplication.shared.windows[0].backgroundColor = NSColor.clear
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

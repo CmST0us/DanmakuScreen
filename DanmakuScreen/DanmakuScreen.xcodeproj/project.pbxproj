@@ -121,6 +121,7 @@
 		4FB0E506225A5D4400EFACB0 /* DanmakuScreen */ = {
 			isa = PBXGroup;
 			children = (
+				4FB0E548225B2EBC00EFACB0 /* Classes */,
 				4FB0E51F225A64DD00EFACB0 /* Utils */,
 				4FB0E518225A5DAA00EFACB0 /* BiliBiliHaishinRoom */,
 				4FB0E517225A5D9A00EFACB0 /* BiliBiliHaishinPacket */,
@@ -187,6 +188,13 @@
 				4FB0E536225A6B2D00EFACB0 /* BiliBiliHaishinPacket.swift */,
 			);
 			path = Packet;
+			sourceTree = "<group>";
+		};
+		4FB0E548225B2EBC00EFACB0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
