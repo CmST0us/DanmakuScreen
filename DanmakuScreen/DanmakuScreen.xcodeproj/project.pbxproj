@@ -28,7 +28,9 @@
 		4FB0E53E225A717E00EFACB0 /* ExpressibleByIntegerLiteral+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E53B225A6BAA00EFACB0 /* ExpressibleByIntegerLiteral+Extension.swift */; };
 		4FB0E540225A75F100EFACB0 /* BiliBiliHaishinRoomDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E53F225A75F100EFACB0 /* BiliBiliHaishinRoomDelegate.swift */; };
 		4FB0E541225A769B00EFACB0 /* BiliBiliHaishinRoomDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E53F225A75F100EFACB0 /* BiliBiliHaishinRoomDelegate.swift */; };
-		4FB0E543225A7B7F00EFACB0 /* BiliBiliHaishinPacketDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E542225A7B7F00EFACB0 /* BiliBiliHaishinPacketDecoder.swift */; };
+		4FB0E543225A7B7F00EFACB0 /* BiliBiliHaishinPacketDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E542225A7B7F00EFACB0 /* BiliBiliHaishinPacketDispatcher.swift */; };
+		4FB0E546225B05C200EFACB0 /* BiliBiliHaishinPacketDispatcherDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E545225B05C200EFACB0 /* BiliBiliHaishinPacketDispatcherDelegate.swift */; };
+		4FB0E547225B06C700EFACB0 /* BiliBiliHaishinPacketDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E542225A7B7F00EFACB0 /* BiliBiliHaishinPacketDispatcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +76,8 @@
 		4FB0E538225A6B6C00EFACB0 /* ByteArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ByteArray.swift; sourceTree = "<group>"; };
 		4FB0E53B225A6BAA00EFACB0 /* ExpressibleByIntegerLiteral+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExpressibleByIntegerLiteral+Extension.swift"; sourceTree = "<group>"; };
 		4FB0E53F225A75F100EFACB0 /* BiliBiliHaishinRoomDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiliBiliHaishinRoomDelegate.swift; sourceTree = "<group>"; };
-		4FB0E542225A7B7F00EFACB0 /* BiliBiliHaishinPacketDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiliBiliHaishinPacketDecoder.swift; sourceTree = "<group>"; };
+		4FB0E542225A7B7F00EFACB0 /* BiliBiliHaishinPacketDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiliBiliHaishinPacketDispatcher.swift; sourceTree = "<group>"; };
+		4FB0E545225B05C200EFACB0 /* BiliBiliHaishinPacketDispatcherDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiliBiliHaishinPacketDispatcherDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,8 +137,9 @@
 		4FB0E517225A5D9A00EFACB0 /* BiliBiliHaishin */ = {
 			isa = PBXGroup;
 			children = (
-				4FB0E536225A6B2D00EFACB0 /* BiliBiliHaishinPacket.swift */,
-				4FB0E542225A7B7F00EFACB0 /* BiliBiliHaishinPacketDecoder.swift */,
+				4FB0E544225B05A200EFACB0 /* Packet */,
+				4FB0E542225A7B7F00EFACB0 /* BiliBiliHaishinPacketDispatcher.swift */,
+				4FB0E545225B05C200EFACB0 /* BiliBiliHaishinPacketDispatcherDelegate.swift */,
 			);
 			path = BiliBiliHaishin;
 			sourceTree = "<group>";
@@ -175,6 +179,14 @@
 				4FB0E52D225A676F00EFACB0 /* Info.plist */,
 			);
 			path = DanmakuScreenTests;
+			sourceTree = "<group>";
+		};
+		4FB0E544225B05A200EFACB0 /* Packet */ = {
+			isa = PBXGroup;
+			children = (
+				4FB0E536225A6B2D00EFACB0 /* BiliBiliHaishinPacket.swift */,
+			);
+			path = Packet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,8 +301,9 @@
 				4FB0E50A225A5D4400EFACB0 /* ViewController.swift in Sources */,
 				4FB0E524225A660400EFACB0 /* BiliBiliHaishinRoomJSON.swift in Sources */,
 				4FB0E508225A5D4400EFACB0 /* AppDelegate.swift in Sources */,
+				4FB0E546225B05C200EFACB0 /* BiliBiliHaishinPacketDispatcherDelegate.swift in Sources */,
 				4FB0E51E225A63BE00EFACB0 /* BiliBiliHaishinRoom.swift in Sources */,
-				4FB0E543225A7B7F00EFACB0 /* BiliBiliHaishinPacketDecoder.swift in Sources */,
+				4FB0E543225A7B7F00EFACB0 /* BiliBiliHaishinPacketDispatcher.swift in Sources */,
 				4FB0E521225A64E800EFACB0 /* URLSessionSync.swift in Sources */,
 				4FB0E540225A75F100EFACB0 /* BiliBiliHaishinRoomDelegate.swift in Sources */,
 			);
@@ -303,6 +316,7 @@
 				4FB0E541225A769B00EFACB0 /* BiliBiliHaishinRoomDelegate.swift in Sources */,
 				4FB0E53E225A717E00EFACB0 /* ExpressibleByIntegerLiteral+Extension.swift in Sources */,
 				4FB0E52C225A676F00EFACB0 /* DanmakuScreenTests.swift in Sources */,
+				4FB0E547225B06C700EFACB0 /* BiliBiliHaishinPacketDispatcher.swift in Sources */,
 				4FB0E534225A67F600EFACB0 /* BiliBiliHaishinRoomJSON.swift in Sources */,
 				4FB0E53A225A6B6F00EFACB0 /* ByteArray.swift in Sources */,
 				4FB0E533225A67F300EFACB0 /* BiliBiliHaishinRoom.swift in Sources */,

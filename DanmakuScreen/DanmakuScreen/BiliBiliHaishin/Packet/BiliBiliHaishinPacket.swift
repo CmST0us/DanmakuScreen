@@ -45,7 +45,6 @@ class BiliBiliHaishinPacket {
 }
 
 // MARK: - Auth Packet
-
 class BiliBiliHaishinAuthPacket: BiliBiliHaishinPacket {
     struct AuthJSON: Codable {
         var uid: Int = 0
@@ -69,6 +68,12 @@ class BiliBiliHaishinAuthPacket: BiliBiliHaishinPacket {
     }
 }
 
+// MARK: - Heartbeat Packet
+class BiliBiliHaishinHeartBeatPacket: BiliBiliHaishinPacket {
+    override var operationCode: BiliBiliHaishinPacketOperationCode {
+        return .ClientHeartbeat
+    }
+}
 
 // MARK: - Command Packet
 class BiliBiliHaishinCommandPacket: BiliBiliHaishinPacket {
@@ -82,26 +87,49 @@ class BiliBiliHaishinCommandPacket: BiliBiliHaishinPacket {
         case Preparing = "PREPARING"
         case Live = "LIVE"
         case WishBottle = "WISH_BOTTLE"
-    }
-    
-    struct CommandJSON: Codable {
-        var cmd: String
+        
+        // Inner Command, Not API
+        case Unsupport = "_Unsupport"
     }
     
     override var operationCode: BiliBiliHaishinPacketOperationCode {
         return .Command
     }
+    
+    var command: Command {
+        return Command(rawValue: self.jsonObject["cmd"]! as! String) ?? .Unsupport
+    }
+    
+    var jsonObject: [String: Any]
+    
+    init?(data: Data) {
+        let jsonObj = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? Dictionary<String, Any>
+        if (jsonObj == nil) {
+            return nil
+        }
+        self.jsonObject = jsonObj!
+    }
+    
 }
 
 class BiliBiliHaishinDanmakuPacket: BiliBiliHaishinCommandPacket {
     
-    init(data: Data) {
-        var json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments)
-        guard json != nil else {
-            return
-        }
+    var info: [Any] {
+        return self.jsonObject["info"]! as! [Any]
     }
-//    override var data: Data {
-//
-//    }
+    
+    var text: String {
+        return self.info[1] as! String
+    }
+    
+    var authorNick: String {
+        let authorArray = self.info[2] as! [Any]
+        return authorArray[1] as! String
+    }
+    
+    var authorID: Int {
+        let authorArray = self.info[2] as! [Any]
+        return authorArray[0] as! Int
+    }
+    
 }

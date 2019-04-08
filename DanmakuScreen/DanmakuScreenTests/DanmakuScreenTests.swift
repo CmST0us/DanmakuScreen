@@ -9,9 +9,9 @@
 import XCTest
 class DanmakuScreenTests: XCTestCase {
     var haishinRoom: BiliBiliHaishinRoom!
-    let roomID = 14917277
+    let roomID = 5050
     override func setUp() {
-        self.haishinRoom = BiliBiliHaishinRoom(urlID: 14917277)
+        self.haishinRoom = BiliBiliHaishinRoom(urlID: 5050)
         self.haishinRoom.delegate = self
     }
 
@@ -33,22 +33,33 @@ class DanmakuScreenTests: XCTestCase {
     
     func testAuth() {
         self.haishinRoom.fetchRoomID()
+        print("Connect Room ID: \(String(self.haishinRoom.roomID))")
         self.haishinRoom.connect()
         RunLoop.current.run()
     }
-
+    
+    func testDanmaku() {
+        self.haishinRoom.fetchRoomID()
+                print("Connect Room ID: \(String(self.haishinRoom.roomID))")
+        self.haishinRoom.connect()
+        
+        BiliBiliHaishinPacketDispatcher.shared.registerCommandPacketListener(sender: self, command: .RecvDanmaku) { (packet) in
+            let danmaku = packet as! BiliBiliHaishinDanmakuPacket
+            print("\(danmaku.authorNick): \(danmaku.text)")
+        }
+        RunLoop.current.run()
+    }
 }
 
 extension DanmakuScreenTests: BiliBiliHaishinRoomDelegate {
-    func roomDidAuth(_ room: BiliBiliHaishinRoom) {
-        print("Did Auth")
-    }
-    
+
     func roomDidConnect(_ room: BiliBiliHaishinRoom) {
         self.haishinRoom.doAuth()
+        self.haishinRoom.startHeartbeat()
     }
     
     func roomDidDisconnect(_ room: BiliBiliHaishinRoom) {
         print("Did Disconnect")
+        self.haishinRoom.stopHearbeat()
     }
 }

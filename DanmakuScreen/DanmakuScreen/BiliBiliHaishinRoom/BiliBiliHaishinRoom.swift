@@ -21,6 +21,9 @@ class BiliBiliHaishinRoom: NSObject {
     
     weak var delegate: BiliBiliHaishinRoomDelegate?
     
+    //MARK: - Private
+    private var heartbeatTimer: Timer!
+    
     private var isConnect: Bool = false {
         didSet {
             if (self.isConnect) {
@@ -37,6 +40,7 @@ class BiliBiliHaishinRoom: NSObject {
         return s
     }()
     
+    // MARK: - Public
     init(urlID: Int) {
         self.urlID = urlID
     }
@@ -65,9 +69,25 @@ class BiliBiliHaishinRoom: NSObject {
         self.socket.write(data: authPacket.encode())
     }
     
+}
+
+extension BiliBiliHaishinRoom {
     
+    func startHeartbeat() {
+        self.heartbeatTimer = Timer(timeInterval: 20, target: self, selector: #selector(heartbeatHandler), userInfo: nil, repeats: true)
+        RunLoop.current.add(self.heartbeatTimer, forMode: .common)
+        self.heartbeatTimer.fire()
+    }
     
+    func stopHearbeat() {
+        self.heartbeatTimer.invalidate()
+        self.heartbeatTimer = nil
+    }
     
+    @objc func heartbeatHandler() {
+        let heartbeatPacket = BiliBiliHaishinHeartBeatPacket()
+        self.socket.write(data: heartbeatPacket.encode())
+    }
 }
 
 // MARK: - WebSocket Delegate
@@ -77,7 +97,7 @@ extension BiliBiliHaishinRoom: WebSocketDelegate {
     }
     
     func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
-        print("\(data)")
+        BiliBiliHaishinPacketDispatcher.shared.dispatch(data)
     }
     
     func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
