@@ -123,7 +123,7 @@
 			children = (
 				4FB0E51F225A64DD00EFACB0 /* Utils */,
 				4FB0E518225A5DAA00EFACB0 /* BiliBiliHaishinRoom */,
-				4FB0E517225A5D9A00EFACB0 /* BiliBiliHaishin */,
+				4FB0E517225A5D9A00EFACB0 /* BiliBiliHaishinPacket */,
 				4FB0E507225A5D4400EFACB0 /* AppDelegate.swift */,
 				4FB0E509225A5D4400EFACB0 /* ViewController.swift */,
 				4FB0E50B225A5D4600EFACB0 /* Assets.xcassets */,
@@ -134,14 +134,14 @@
 			path = DanmakuScreen;
 			sourceTree = "<group>";
 		};
-		4FB0E517225A5D9A00EFACB0 /* BiliBiliHaishin */ = {
+		4FB0E517225A5D9A00EFACB0 /* BiliBiliHaishinPacket */ = {
 			isa = PBXGroup;
 			children = (
 				4FB0E544225B05A200EFACB0 /* Packet */,
 				4FB0E542225A7B7F00EFACB0 /* BiliBiliHaishinPacketDispatcher.swift */,
 				4FB0E545225B05C200EFACB0 /* BiliBiliHaishinPacketDispatcherDelegate.swift */,
 			);
-			path = BiliBiliHaishin;
+			path = BiliBiliHaishinPacket;
 			sourceTree = "<group>";
 		};
 		4FB0E518225A5DAA00EFACB0 /* BiliBiliHaishinRoom */ = {
