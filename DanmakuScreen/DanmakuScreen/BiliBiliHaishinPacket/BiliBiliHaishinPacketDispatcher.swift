@@ -61,7 +61,8 @@ class BiliBiliHaishinPacketDispatcher {
             }
             
         default:
-            print("Command \(commandPacket!.command.rawValue) not support yet")
+            let _ = 0
+//            print("Command \(commandPacket!.command.rawValue) not support yet")
         }
     }
     
@@ -69,9 +70,7 @@ class BiliBiliHaishinPacketDispatcher {
     
     func dispatch(_ data: Data) {
         let array = ByteArray(data: data)
-        print("Recv \(data.count) bytes")
-        do {   
-            print("Read Packet")
+        do {
             let packetSize = try array.readUInt32()
             let headerSize = try array.readUInt16()
             let _ = try array.readUInt16() //version
@@ -91,7 +90,8 @@ class BiliBiliHaishinPacketDispatcher {
                 case .Command:
                     self.dispatchCommandPayload(payload)
                 default:
-                    print("\(operationCode!) Not support yet")
+                    let _ = 0
+//                    print("\(operationCode!) Not support yet")
                 }
             }
             
@@ -123,7 +123,7 @@ class BiliBiliHaishinPacketDispatcher {
         }
     }
     
-    func removeListerner(sender: NSObject, command: BiliBiliHaishinCommandPacket.Command) {
+    func removeListener(sender: NSObject, command: BiliBiliHaishinCommandPacket.Command) {
         if let listeners = self.listener[command] {
             var removeIndex: [Int] = []
             listeners.enumerated().forEach { (i) in

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4FB0E508225A5D4400EFACB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E507225A5D4400EFACB0 /* AppDelegate.swift */; };
-		4FB0E50A225A5D4400EFACB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E509225A5D4400EFACB0 /* ViewController.swift */; };
 		4FB0E50C225A5D4600EFACB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FB0E50B225A5D4600EFACB0 /* Assets.xcassets */; };
 		4FB0E50F225A5D4600EFACB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FB0E50D225A5D4600EFACB0 /* Main.storyboard */; };
 		4FB0E51A225A634C00EFACB0 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB0E519225A634C00EFACB0 /* Starscream.framework */; };
@@ -31,6 +30,13 @@
 		4FB0E543225A7B7F00EFACB0 /* BiliBiliHaishinPacketDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E542225A7B7F00EFACB0 /* BiliBiliHaishinPacketDispatcher.swift */; };
 		4FB0E546225B05C200EFACB0 /* BiliBiliHaishinPacketDispatcherDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E545225B05C200EFACB0 /* BiliBiliHaishinPacketDispatcherDelegate.swift */; };
 		4FB0E547225B06C700EFACB0 /* BiliBiliHaishinPacketDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E542225A7B7F00EFACB0 /* BiliBiliHaishinPacketDispatcher.swift */; };
+		4FB0E54B225B349100EFACB0 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB0E54A225B349100EFACB0 /* SnapKit.framework */; };
+		4FB0E54C225B349100EFACB0 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB0E54A225B349100EFACB0 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4FB0E551225B34F300EFACB0 /* DanmakuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E550225B34F300EFACB0 /* DanmakuView.swift */; };
+		4FB0E553225B350400EFACB0 /* DanmakuBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E552225B350400EFACB0 /* DanmakuBoardView.swift */; };
+		4FB0E556225B354600EFACB0 /* DanmakuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E555225B354600EFACB0 /* DanmakuViewController.swift */; };
+		4FB0E559225B359F00EFACB0 /* DanmakuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E558225B359F00EFACB0 /* DanmakuModel.swift */; };
+		4FB0E55B225B3FE300EFACB0 /* BiliBiliHaishinRoomOpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E55A225B3FE300EFACB0 /* BiliBiliHaishinRoomOpenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				4FB0E51B225A634C00EFACB0 /* Starscream.framework in Embed Frameworks */,
+				4FB0E54C225B349100EFACB0 /* SnapKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,7 +67,6 @@
 /* Begin PBXFileReference section */
 		4FB0E504225A5D4400EFACB0 /* DanmakuScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DanmakuScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FB0E507225A5D4400EFACB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4FB0E509225A5D4400EFACB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4FB0E50B225A5D4600EFACB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FB0E50E225A5D4600EFACB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4FB0E510225A5D4600EFACB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,6 +84,12 @@
 		4FB0E53F225A75F100EFACB0 /* BiliBiliHaishinRoomDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiliBiliHaishinRoomDelegate.swift; sourceTree = "<group>"; };
 		4FB0E542225A7B7F00EFACB0 /* BiliBiliHaishinPacketDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiliBiliHaishinPacketDispatcher.swift; sourceTree = "<group>"; };
 		4FB0E545225B05C200EFACB0 /* BiliBiliHaishinPacketDispatcherDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiliBiliHaishinPacketDispatcherDelegate.swift; sourceTree = "<group>"; };
+		4FB0E54A225B349100EFACB0 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FB0E550225B34F300EFACB0 /* DanmakuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanmakuView.swift; sourceTree = "<group>"; };
+		4FB0E552225B350400EFACB0 /* DanmakuBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanmakuBoardView.swift; sourceTree = "<group>"; };
+		4FB0E555225B354600EFACB0 /* DanmakuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanmakuViewController.swift; sourceTree = "<group>"; };
+		4FB0E558225B359F00EFACB0 /* DanmakuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanmakuModel.swift; sourceTree = "<group>"; };
+		4FB0E55A225B3FE300EFACB0 /* BiliBiliHaishinRoomOpenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiliBiliHaishinRoomOpenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FB0E51A225A634C00EFACB0 /* Starscream.framework in Frameworks */,
+				4FB0E54B225B349100EFACB0 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +115,7 @@
 		4FB0E4FB225A5D4400EFACB0 = {
 			isa = PBXGroup;
 			children = (
+				4FB0E54A225B349100EFACB0 /* SnapKit.framework */,
 				4FB0E519225A634C00EFACB0 /* Starscream.framework */,
 				4FB0E506225A5D4400EFACB0 /* DanmakuScreen */,
 				4FB0E52A225A676F00EFACB0 /* DanmakuScreenTests */,
@@ -126,7 +140,6 @@
 				4FB0E518225A5DAA00EFACB0 /* BiliBiliHaishinRoom */,
 				4FB0E517225A5D9A00EFACB0 /* BiliBiliHaishinPacket */,
 				4FB0E507225A5D4400EFACB0 /* AppDelegate.swift */,
-				4FB0E509225A5D4400EFACB0 /* ViewController.swift */,
 				4FB0E50B225A5D4600EFACB0 /* Assets.xcassets */,
 				4FB0E50D225A5D4600EFACB0 /* Main.storyboard */,
 				4FB0E510225A5D4600EFACB0 /* Info.plist */,
@@ -193,8 +206,37 @@
 		4FB0E548225B2EBC00EFACB0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4FB0E54D225B34B200EFACB0 /* DanmakuBoard */,
+				4FB0E555225B354600EFACB0 /* DanmakuViewController.swift */,
+				4FB0E55A225B3FE300EFACB0 /* BiliBiliHaishinRoomOpenViewController.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		4FB0E54D225B34B200EFACB0 /* DanmakuBoard */ = {
+			isa = PBXGroup;
+			children = (
+				4FB0E54F225B34CE00EFACB0 /* Model */,
+				4FB0E54E225B34C600EFACB0 /* View */,
+				4FB0E552225B350400EFACB0 /* DanmakuBoardView.swift */,
+			);
+			path = DanmakuBoard;
+			sourceTree = "<group>";
+		};
+		4FB0E54E225B34C600EFACB0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4FB0E550225B34F300EFACB0 /* DanmakuView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4FB0E54F225B34CE00EFACB0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4FB0E558225B359F00EFACB0 /* DanmakuModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,14 +345,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FB0E55B225B3FE300EFACB0 /* BiliBiliHaishinRoomOpenViewController.swift in Sources */,
+				4FB0E556225B354600EFACB0 /* DanmakuViewController.swift in Sources */,
+				4FB0E553225B350400EFACB0 /* DanmakuBoardView.swift in Sources */,
 				4FB0E537225A6B2D00EFACB0 /* BiliBiliHaishinPacket.swift in Sources */,
 				4FB0E539225A6B6C00EFACB0 /* ByteArray.swift in Sources */,
 				4FB0E53C225A6BAA00EFACB0 /* ExpressibleByIntegerLiteral+Extension.swift in Sources */,
-				4FB0E50A225A5D4400EFACB0 /* ViewController.swift in Sources */,
 				4FB0E524225A660400EFACB0 /* BiliBiliHaishinRoomJSON.swift in Sources */,
 				4FB0E508225A5D4400EFACB0 /* AppDelegate.swift in Sources */,
 				4FB0E546225B05C200EFACB0 /* BiliBiliHaishinPacketDispatcherDelegate.swift in Sources */,
 				4FB0E51E225A63BE00EFACB0 /* BiliBiliHaishinRoom.swift in Sources */,
+				4FB0E559225B359F00EFACB0 /* DanmakuModel.swift in Sources */,
+				4FB0E551225B34F300EFACB0 /* DanmakuView.swift in Sources */,
 				4FB0E543225A7B7F00EFACB0 /* BiliBiliHaishinPacketDispatcher.swift in Sources */,
 				4FB0E521225A64E800EFACB0 /* URLSessionSync.swift in Sources */,
 				4FB0E540225A75F100EFACB0 /* BiliBiliHaishinRoomDelegate.swift in Sources */,

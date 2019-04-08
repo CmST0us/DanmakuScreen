@@ -45,6 +45,10 @@ class BiliBiliHaishinRoom: NSObject {
         self.urlID = urlID
     }
     
+    deinit {
+        self.socket.disconnect()
+    }
+    
     func fetchRoomID() -> Bool {
         let url = URL(string: BiliBiliHaishinRoom.RoomIDAPIBase + "\(self.urlID)")!
         let (data, _, _) = URLSession.shared.syncDataTask(request: URLRequest(url: url))
@@ -61,6 +65,10 @@ class BiliBiliHaishinRoom: NSObject {
     
     func connect() {
         self.socket.connect()
+    }
+    
+    func disconnect() {
+        self.socket.disconnect()
     }
     
     func doAuth() {
@@ -92,6 +100,10 @@ extension BiliBiliHaishinRoom {
 
 // MARK: - WebSocket Delegate
 extension BiliBiliHaishinRoom: WebSocketDelegate {
+    func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
+        
+    }
+    
     func websocketDidConnect(socket: WebSocketClient) {
         self.isConnect = true
     }
@@ -102,9 +114,5 @@ extension BiliBiliHaishinRoom: WebSocketDelegate {
     
     func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
         self.isConnect = false
-    }
-    
-    func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
-        print("\(text)")
     }
 }
