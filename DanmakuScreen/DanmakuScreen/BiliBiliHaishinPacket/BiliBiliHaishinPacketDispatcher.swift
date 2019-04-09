@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import Gzip
 class CommandPacketListener {
     typealias Handler = (_ packet: BiliBiliHaishinCommandPacket) -> Void
     
@@ -86,7 +86,9 @@ class BiliBiliHaishinPacketDispatcher {
             
             // uncompress payload
             var payload: Data!
-       
+            if (rawPayload.isGzipped) {
+                payload = (try? rawPayload.gunzipped()) ?? Data()
+            }
             
             if (payload.count == 0) {
                 return
