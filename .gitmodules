@@ -4,6 +4,3 @@
 [submodule "SnapKit"]
 	path = SnapKit
 	url = https://github.com/SnapKit/SnapKit.git
-[submodule "GzipSwift"]
-	path = GzipSwift
-	url = https://github.com/1024jp/GzipSwift.git

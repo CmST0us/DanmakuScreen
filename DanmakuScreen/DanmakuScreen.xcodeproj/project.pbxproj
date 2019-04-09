@@ -37,8 +37,6 @@
 		4FB0E556225B354600EFACB0 /* DanmakuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E555225B354600EFACB0 /* DanmakuViewController.swift */; };
 		4FB0E559225B359F00EFACB0 /* DanmakuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E558225B359F00EFACB0 /* DanmakuModel.swift */; };
 		4FB0E55B225B3FE300EFACB0 /* BiliBiliHaishinRoomOpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E55A225B3FE300EFACB0 /* BiliBiliHaishinRoomOpenViewController.swift */; };
-		4FB4D376225C6A04000EC9B3 /* Gzip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB4D375225C6A04000EC9B3 /* Gzip.framework */; };
-		4FB4D377225C6A04000EC9B3 /* Gzip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB4D375225C6A04000EC9B3 /* Gzip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +58,6 @@
 			files = (
 				4FB0E51B225A634C00EFACB0 /* Starscream.framework in Embed Frameworks */,
 				4FB0E54C225B349100EFACB0 /* SnapKit.framework in Embed Frameworks */,
-				4FB4D377225C6A04000EC9B3 /* Gzip.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,7 +90,6 @@
 		4FB0E555225B354600EFACB0 /* DanmakuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanmakuViewController.swift; sourceTree = "<group>"; };
 		4FB0E558225B359F00EFACB0 /* DanmakuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanmakuModel.swift; sourceTree = "<group>"; };
 		4FB0E55A225B3FE300EFACB0 /* BiliBiliHaishinRoomOpenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiliBiliHaishinRoomOpenViewController.swift; sourceTree = "<group>"; };
-		4FB4D375225C6A04000EC9B3 /* Gzip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Gzip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +99,6 @@
 			files = (
 				4FB0E51A225A634C00EFACB0 /* Starscream.framework in Frameworks */,
 				4FB0E54B225B349100EFACB0 /* SnapKit.framework in Frameworks */,
-				4FB4D376225C6A04000EC9B3 /* Gzip.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +115,6 @@
 		4FB0E4FB225A5D4400EFACB0 = {
 			isa = PBXGroup;
 			children = (
-				4FB4D375225C6A04000EC9B3 /* Gzip.framework */,
 				4FB0E54A225B349100EFACB0 /* SnapKit.framework */,
 				4FB0E519225A634C00EFACB0 /* Starscream.framework */,
 				4FB0E506225A5D4400EFACB0 /* DanmakuScreen */,
