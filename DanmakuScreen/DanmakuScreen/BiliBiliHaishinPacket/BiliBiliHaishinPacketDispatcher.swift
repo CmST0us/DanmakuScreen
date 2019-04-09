@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Gzip
 class CommandPacketListener {
     typealias Handler = (_ packet: BiliBiliHaishinCommandPacket) -> Void
     
@@ -71,41 +70,47 @@ class BiliBiliHaishinPacketDispatcher {
     func dispatch(_ data: Data) {
         let array = ByteArray(data: data)
         do {
-            let packetSize = try array.readUInt32()
-            let headerSize = try array.readUInt16()
-            let version = try array.readUInt16() //version
-            let operationCodeRaw = try array.readUInt32()
-            let operationCode = BiliBiliHaishinPacketOperationCode(rawValue: operationCodeRaw)
-            let _ = try array.readUInt32() //sequence
-            let rawPayload = try array.readBytes(Int(packetSize) - Int(headerSize))
-            
-            // Just Use Version 2
-            if (version != 2) {
-                return
-            }
-            
-            // uncompress payload
-            var payload: Data!
-            if (rawPayload.isGzipped) {
-                payload = (try? rawPayload.gunzipped()) ?? Data()
-            }
-            
-            if (payload.count == 0) {
-                return
-            }
-            
-            let jsonDict = self.createPayloadDictionaryFromData(payload)
-            if (jsonDict == nil) {
-                return
-            }
-            
-            if (operationCode != nil) {
-                switch operationCode! {
-                case .Command:
-                    self.dispatchCommandPayload(payload)
-                default:
-                    let _ = 0
-//                        print("\(operationCode!) Not support yet")
+            // version 2解压后的数据可能带有很多个包
+            while (array.bytesAvailable > 0) {
+                let packetSize = try array.readUInt32()
+                let headerSize = try array.readUInt16()
+                let version = try array.readUInt16() //version
+                let operationCodeRaw = try array.readUInt32()
+                let operationCode = BiliBiliHaishinPacketOperationCode(rawValue: operationCodeRaw)
+                let _ = try array.readUInt32() //sequence
+                let rawPayload = try array.readBytes(Int(packetSize) - Int(headerSize))
+                
+                // version 2 的payload是压缩的数据，解压后的数据为version 0或者version 1 非压缩payload
+                let compressedPayload = version == 2
+                
+                var payload: Data!
+                if (compressedPayload) {
+                    if let decompressPayload = rawPayload.unzip() {
+                        payload = decompressPayload
+                    } else {
+                        continue
+                    }
+                    if (payload.count == 0) {
+                        continue
+                    }
+                    // 解压后迭代分发
+                    self.dispatch(payload)
+                } else {
+                    payload = rawPayload
+                    let jsonDict = self.createPayloadDictionaryFromData(payload)
+                    if (jsonDict == nil) {
+                        continue
+                    }
+                    
+                    if (operationCode != nil) {
+                        switch operationCode! {
+                        case .Command:
+                            self.dispatchCommandPayload(payload)
+                        default:
+                            let _ = 0
+//                            print("\(operationCode!) Not support yet")
+                        }
+                    }
                 }
             }
         } catch {

@@ -27,12 +27,12 @@ class DanmakuViewController: NSViewController {
     }
     
     func registerDanmakuHandler() {
-        BiliBiliHaishinPacketDispatcher.shared.registerCommandPacketListener(sender: self, command: .RecvDanmaku) { (packet) in
+        BiliBiliHaishinPacketDispatcher.shared.registerCommandPacketListener(sender: self, command: .RecvDanmaku) { [weak self] (packet) in
             if let danmakuPacket = packet as? BiliBiliHaishinDanmakuPacket {
-                print("\(danmakuPacket.authorNick): \(danmakuPacket.text)")
+//                print("\(danmakuPacket.authorNick): \(danmakuPacket.text)")
                 DispatchQueue.main.async {
                     let danmaku = DanmakuModel(author: danmakuPacket.authorNick, text: danmakuPacket.text)
-                    self.danmakuBoard.pushDanmaku(danmaku)
+                    self?.danmakuBoard.pushDanmaku(danmaku)
                 }
             }
         }
@@ -40,6 +40,9 @@ class DanmakuViewController: NSViewController {
     
     @objc func willConnectRoom(_ noti: Notification) {
         BiliBiliHaishinPacketDispatcher.shared.removeListener(sender: self)
+        if (self.haishinRoom != nil) {
+            self.haishinRoom.stopHearbeat()
+        }
         self.registerDanmakuHandler()
         if let roomID = noti.object as? String {
             self.haishinRoom = BiliBiliHaishinRoom(urlID: Int(roomID)!)

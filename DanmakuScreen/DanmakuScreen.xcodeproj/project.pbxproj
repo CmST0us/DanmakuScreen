@@ -38,6 +38,7 @@
 		4FB0E559225B359F00EFACB0 /* DanmakuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E558225B359F00EFACB0 /* DanmakuModel.swift */; };
 		4FB0E55B225B3FE300EFACB0 /* BiliBiliHaishinRoomOpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E55A225B3FE300EFACB0 /* BiliBiliHaishinRoomOpenViewController.swift */; };
 		4FB4D37A225C7455000EC9B3 /* DataCompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB4D379225C7455000EC9B3 /* DataCompression.swift */; };
+		4FB4D37B225C74AF000EC9B3 /* DataCompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB4D379225C7455000EC9B3 /* DataCompression.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -375,6 +376,7 @@
 				4FB0E53E225A717E00EFACB0 /* ExpressibleByIntegerLiteral+Extension.swift in Sources */,
 				4FB0E52C225A676F00EFACB0 /* DanmakuScreenTests.swift in Sources */,
 				4FB0E547225B06C700EFACB0 /* BiliBiliHaishinPacketDispatcher.swift in Sources */,
+				4FB4D37B225C74AF000EC9B3 /* DataCompression.swift in Sources */,
 				4FB0E534225A67F600EFACB0 /* BiliBiliHaishinRoomJSON.swift in Sources */,
 				4FB0E53A225A6B6F00EFACB0 /* ByteArray.swift in Sources */,
 				4FB0E533225A67F300EFACB0 /* BiliBiliHaishinRoom.swift in Sources */,

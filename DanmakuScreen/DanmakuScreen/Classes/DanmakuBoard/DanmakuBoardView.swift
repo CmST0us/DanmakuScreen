@@ -44,10 +44,10 @@ class DanmakuBoardView: NSView {
         self.addSubview(danmakuView)
         danmakuView.danmakuModel = danmaku
         self.danmakuViews.append(danmakuView)
-        if (self.danmakuViews.count > maxDanmakuCount) {
-            popDanmaku()
+        if (self.danmakuViews.count > self.maxDanmakuCount) {
+            self.popDanmaku()
         }
-        adjuestDanmakuView()
+        self.adjuestDanmakuView()
     }
     
 }

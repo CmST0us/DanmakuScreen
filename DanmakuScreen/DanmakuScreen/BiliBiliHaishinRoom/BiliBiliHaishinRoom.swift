@@ -22,7 +22,7 @@ class BiliBiliHaishinRoom: NSObject {
     weak var delegate: BiliBiliHaishinRoomDelegate?
     
     //MARK: - Private
-    private var heartbeatTimer: Timer!
+    private var heartbeatTimer: Timer?
     
     private var isConnect: Bool = false {
         didSet {
@@ -46,6 +46,7 @@ class BiliBiliHaishinRoom: NSObject {
     }
     
     deinit {
+        self.stopHearbeat()
         self.socket.disconnect()
     }
     
@@ -83,12 +84,12 @@ extension BiliBiliHaishinRoom {
     
     func startHeartbeat() {
         self.heartbeatTimer = Timer(timeInterval: 20, target: self, selector: #selector(heartbeatHandler), userInfo: nil, repeats: true)
-        RunLoop.current.add(self.heartbeatTimer, forMode: .common)
-        self.heartbeatTimer.fire()
+        RunLoop.current.add(self.heartbeatTimer!, forMode: .common)
+        self.heartbeatTimer!.fire()
     }
     
     func stopHearbeat() {
-        self.heartbeatTimer.invalidate()
+        self.heartbeatTimer?.invalidate()
         self.heartbeatTimer = nil
     }
     

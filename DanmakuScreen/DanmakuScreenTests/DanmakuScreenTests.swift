@@ -51,7 +51,11 @@ class DanmakuScreenTests: XCTestCase {
     }
     
     func testGZip() {
-
+        let s = "Hello World"
+        let d = s.data(using: .utf8)!
+        let zlibData = d.compress(withAlgorithm: .zlib)
+        let dd = zlibData?.decompress(withAlgorithm: .zlib)
+        print("\(String(data: dd!, encoding: .utf8)!)")
     }
 }
 
