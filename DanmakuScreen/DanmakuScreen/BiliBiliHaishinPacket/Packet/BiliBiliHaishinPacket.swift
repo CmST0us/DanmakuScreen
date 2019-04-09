@@ -49,7 +49,7 @@ class BiliBiliHaishinAuthPacket: BiliBiliHaishinPacket {
     struct AuthJSON: Codable {
         var uid: Int = 0
         var roomid: Int = 0
-        var protover: Int = 1
+        var protover: Int = 2
         var platform: String = "web"
         var clientver: String = "1.4.0"
     }

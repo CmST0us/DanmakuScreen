@@ -49,6 +49,10 @@ class DanmakuScreenTests: XCTestCase {
         }
         RunLoop.current.run()
     }
+    
+    func testGZip() {
+
+    }
 }
 
 extension DanmakuScreenTests: BiliBiliHaishinRoomDelegate {

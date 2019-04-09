@@ -73,12 +73,24 @@ class BiliBiliHaishinPacketDispatcher {
         do {
             let packetSize = try array.readUInt32()
             let headerSize = try array.readUInt16()
-            let _ = try array.readUInt16() //version
+            let version = try array.readUInt16() //version
             let operationCodeRaw = try array.readUInt32()
             let operationCode = BiliBiliHaishinPacketOperationCode(rawValue: operationCodeRaw)
             let _ = try array.readUInt32() //sequence
+            let rawPayload = try array.readBytes(Int(packetSize) - Int(headerSize))
             
-            let payload = try array.readBytes(Int(packetSize) - Int(headerSize))
+            // Just Use Version 2
+            if (version != 2) {
+                return
+            }
+            
+            // uncompress payload
+            var payload: Data!
+       
+            
+            if (payload.count == 0) {
+                return
+            }
             
             let jsonDict = self.createPayloadDictionaryFromData(payload)
             if (jsonDict == nil) {
@@ -91,10 +103,9 @@ class BiliBiliHaishinPacketDispatcher {
                     self.dispatchCommandPayload(payload)
                 default:
                     let _ = 0
-//                    print("\(operationCode!) Not support yet")
+//                        print("\(operationCode!) Not support yet")
                 }
             }
-            
         } catch {
             print("Packet Read Error, Skip")
         }
