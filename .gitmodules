@@ -4,6 +4,3 @@
 [submodule "SnapKit"]
 	path = SnapKit
 	url = https://github.com/SnapKit/SnapKit.git
-[submodule "DataCompression"]
-	path = DataCompression
-	url = https://github.com/mw99/DataCompression.git

@@ -37,6 +37,7 @@
 		4FB0E556225B354600EFACB0 /* DanmakuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E555225B354600EFACB0 /* DanmakuViewController.swift */; };
 		4FB0E559225B359F00EFACB0 /* DanmakuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E558225B359F00EFACB0 /* DanmakuModel.swift */; };
 		4FB0E55B225B3FE300EFACB0 /* BiliBiliHaishinRoomOpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0E55A225B3FE300EFACB0 /* BiliBiliHaishinRoomOpenViewController.swift */; };
+		4FB4D37A225C7455000EC9B3 /* DataCompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB4D379225C7455000EC9B3 /* DataCompression.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		4FB0E555225B354600EFACB0 /* DanmakuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanmakuViewController.swift; sourceTree = "<group>"; };
 		4FB0E558225B359F00EFACB0 /* DanmakuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanmakuModel.swift; sourceTree = "<group>"; };
 		4FB0E55A225B3FE300EFACB0 /* BiliBiliHaishinRoomOpenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiliBiliHaishinRoomOpenViewController.swift; sourceTree = "<group>"; };
+		4FB4D379225C7455000EC9B3 /* DataCompression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCompression.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				4FB0E53B225A6BAA00EFACB0 /* ExpressibleByIntegerLiteral+Extension.swift */,
 				4FB0E538225A6B6C00EFACB0 /* ByteArray.swift */,
 				4FB0E520225A64E800EFACB0 /* URLSessionSync.swift */,
+				4FB4D379225C7455000EC9B3 /* DataCompression.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				4FB0E51E225A63BE00EFACB0 /* BiliBiliHaishinRoom.swift in Sources */,
 				4FB0E559225B359F00EFACB0 /* DanmakuModel.swift in Sources */,
 				4FB0E551225B34F300EFACB0 /* DanmakuView.swift in Sources */,
+				4FB4D37A225C7455000EC9B3 /* DataCompression.swift in Sources */,
 				4FB0E543225A7B7F00EFACB0 /* BiliBiliHaishinPacketDispatcher.swift in Sources */,
 				4FB0E521225A64E800EFACB0 /* URLSessionSync.swift in Sources */,
 				4FB0E540225A75F100EFACB0 /* BiliBiliHaishinRoomDelegate.swift in Sources */,
